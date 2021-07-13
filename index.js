@@ -189,6 +189,8 @@ function game(user, computer){
       return "you win!";
     }else {return "you lose!"}
 }
+
+console.log(game(rock,computer));
   
   
 
@@ -203,11 +205,13 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    let mile = 1.606344;
+   const miles = km / mile;
+    console.log('${km} km = ${mile} miles');
   }
 
-
+miles(1);
 
 //Task 5b - Feet to CM
 /*
@@ -217,9 +221,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(ft){
+  let centimeter = ft * 30.48;
+  console.log(`${ft} feet is ${centimeter} centimeters.`)
+}
+
+feet(2);
  
 
 
@@ -256,11 +263,30 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
-  
-  
+function grade(grade) {
+
+  let finalGrade = undefined;
+
+  if (grade > 89) {
+      finalGrade = "A";
+      console.log(`You scored ${grade}% for a ${finalGrade}. Congratulations!`);
+  } else if (grade > 79) {
+      finalGrade = "B";
+      console.log(`You scored ${grade}% for a ${finalGrade}. Good Job!`);
+  } else if (grade > 69) {
+      finalGrade = "C";
+      console.log(`You scored ${grade}% for a ${finalGrade}. Keep Trying!`);
+  } else if (grade > 59) {
+      finalGrade = "D";
+      console.log(`You scored ${grade}% for a ${finalGrade}. Try Harder!`);
+  } else if ( grade < 59) {
+      finalGrade = "F";
+      console.log(`You scored ${grade}% for a ${finalGrade}. Try Again!`);
+  } else {
+      console.log("Incorrect input. Try again.")
+  };
+};
+grade(90);
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
