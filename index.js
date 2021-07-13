@@ -18,6 +18,13 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 20;
+if (votingAge > 18){
+  console.log(true);
+}
+
+
+
 
 
 /*
@@ -31,6 +38,13 @@ Do the following:
    HINT: no function required
 */
 
+let myAge = 20;
+let yourAge = 21;
+if (myAge < yourAge){
+  myAge = myAge + 1;
+  console.log("we are now the same age");
+}
+console.log(myAge)
 
 
 
@@ -46,6 +60,8 @@ Do the following:
    HINT: look up the Number method
 */
 
+let the90s = 1999;
+the90s.toString();
 
 
 
@@ -58,9 +74,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(a, b){
+  let sum = a * b;
+  console.log(sum);
+}
 
 
 
@@ -74,9 +91,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    let dogAge = age * 7;
+    console.log(dogAge);
 }
+
+dogYears(15);
 
 
 
@@ -107,10 +127,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function hungryDog(weight, age){
+  if (age >= 1 && weight > 15) {
+    console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight / 50} lbs. of food.`);
+} else if (age >= 1 && weight > 10) {
+    console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .03} lbs. of food.`)
+} else if (age >= 1 && weight > 5) {
+    console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .04} lbs. of food.`)
+} else if (age >= 1 && weight <= 5) {
+    console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .05} lbs. of food.`)
+} else if (age < 1 && age >= .58) {
+    console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .04} lbs. of food.`)
+} else if (age < 1 && age >= .33) {
+    console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .05} lbs. of food.`)
+} else if (age < 1 && age >= .16) {
+    console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .1} lbs. of food.`)
+} else {
+    console.log(`This dog is ${age} years old, weighs ${weight} lbs. and needs ${weight * .1} lbs. of food.`)
+}
+};
+hungryDog(15,1);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
